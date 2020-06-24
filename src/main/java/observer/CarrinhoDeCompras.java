@@ -1,4 +1,4 @@
-package Observer;
+package observer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,18 +32,4 @@ public class CarrinhoDeCompras implements Sujeito{
         observadores.remove(observador);
     }
 
-    public static void main(String[] args) {
-        var carrinho = new CarrinhoDeCompras();
-        var gerenciadorEstoque = new GerenciadorDeEstoque();
-
-        carrinho.add(gerenciadorEstoque);
-        var item1 = new Item("42",10.0, "...");
-        var item2 = new Item("12",11.0, ".x..");
-
-        carrinho.adicionar(item1);
-        carrinho.remover(gerenciadorEstoque);
-        carrinho.adicionar(item2); // nao notifica
-
-        System.out.println(carrinho.calcularTotal());
-    }
 }

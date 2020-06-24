@@ -1,4 +1,4 @@
-package Observer;
+package observer;
 
 public class Item implements Precificavel {
     private String codigo;
